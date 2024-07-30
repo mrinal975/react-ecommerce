@@ -1,10 +1,11 @@
 import "./App.css";
-
+import DefaultLayout from "./pages/layouts/Index";
+import Routes from "./Routes/Index";
 function App() {
   return (
-    <div className="container">
-      <p className="text-red-500 text-3xl font-bold">Hello</p>
-    </div>
+    <DefaultLayout>
+      <Routes />
+    </DefaultLayout>
   );
 }
 
