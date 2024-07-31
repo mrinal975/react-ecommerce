@@ -69,7 +69,9 @@ function Navbar() {
                 <input
                   type="text"
                   className="w-[150px] sm:w-[150px] group-hover:w-[250px] transition-all duration-300
-               border border-gray-300 rounded-full px-2 focus:outline-none focus:border-1 focus:border-primary"
+               border border-gray-300 rounded-full px-2 focus:outline-none focus:border-1 focus:border-primary
+               dark:bg-gray-800 dark:text-white dark:border-gray-600
+               "
                   placeholder="search"
                 />
                 <IoMdSearch
@@ -100,13 +102,30 @@ function Navbar() {
             </li>
           ))}
           {/* Simple Dropdown and link */}
-          <li className="group inline-block px-3 hover:text-primary duration-200">
+          <li className="relative group inline-block px-3 hover:text-primary duration-200">
             <a className="flex items-center gap-[2px] py-2 ">
               Trending Items
               <span>
                 <FaCaretDown className="transition-all group-hover:rotate-180 duration-200" />
               </span>
             </a>
+            <div
+              className="absolute  left-0 hidden group-hover:block z-[999] w-[150px]
+             text-black bg-white shadow-md"
+            >
+              <ul className="">
+                {DropdownLinks.map((link) => (
+                  <li className="px-3 py-2 hover:text-primary duration-200">
+                    <a
+                      href={link.link}
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </li>
         </ul>
       </div>
