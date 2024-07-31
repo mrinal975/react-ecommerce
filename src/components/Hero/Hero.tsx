@@ -55,8 +55,22 @@ function Hero() {
                   className="flex flex-col justify-center gap-4 pt-1 sm:pt-0 text-center 
                   sm:text-left order-2 sm:order-1 relative z-10"
                 >
-                  <h1 className="">{item.title}</h1>
-                  <p className="">{item.description}</p>
+                  <h1
+                    className=""
+                    data-aos="zoom-out"
+                    data-aos-duration="500"
+                    data-aos-once="true"
+                  >
+                    {item.title}
+                  </h1>
+                  <p
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                    className="text-sm"
+                  >
+                    {item.description}
+                  </p>
                   <div className="">
                     <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full duration-200">
                       Order Now
@@ -64,7 +78,11 @@ function Hero() {
                   </div>
                 </div>
                 <div className="order-1 sm:order-2">
-                  <div className="">
+                  <div
+                    data-aos="zoom-in"
+                    data-aos-once="true"
+                    className="relative z-10"
+                  >
                     <img
                       className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
                       src={item.img}
