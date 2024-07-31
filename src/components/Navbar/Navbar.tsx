@@ -94,8 +94,11 @@ function Navbar() {
       {/* Lower Navbar */}
       <div className="flex justify-center">
         <ul className="sm:flex hidden items-center gap-4">
-          {Menu.map((menu) => (
-            <li className="inline-block px-3 hover:text-primary duration-200">
+          {Menu.map((menu, key) => (
+            <li
+              className="inline-block px-3 hover:text-primary duration-200"
+              key={key}
+            >
               <a href={menu.link} className="">
                 {menu.name}
               </a>
@@ -114,8 +117,11 @@ function Navbar() {
              text-black bg-white shadow-md"
             >
               <ul className="">
-                {DropdownLinks.map((link) => (
-                  <li className="px-3 py-2 hover:text-primary duration-200">
+                {DropdownLinks.map((link, key) => (
+                  <li
+                    className="px-3 py-2 hover:text-primary duration-200"
+                    key={key}
+                  >
                     <a
                       href={link.link}
                       className="inline-block w-full rounded-md p-2 hover:bg-primary/20"

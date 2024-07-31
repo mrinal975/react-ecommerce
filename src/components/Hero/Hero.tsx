@@ -1,6 +1,8 @@
 import Image1 from "../../assets/hero/women.png";
 import Image2 from "../../assets/hero/shopping.png";
 import Image3 from "../../assets/hero/sale.png";
+import Slider from "react-slick";
+
 const ImageList = [
   {
     id: 1,
@@ -27,7 +29,7 @@ const ImageList = [
 
 function Hero() {
   var settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 800,
@@ -45,31 +47,35 @@ function Hero() {
       <div className="h-[700px] w-[700px] bg-primary/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
       {/* hero section */}
       <div className="container pb-8 sm:pb-0">
-        {ImageList.map((item) => (
-          <div className="grid grid-cols-1 sm:grid-cols-2" key={item.id}>
-            <div
-              className="flex flex-col justify-center gap-4 pt-1 sm:pt-0 text-center 
+        <Slider {...settings}>
+          {ImageList.map((item) => (
+            <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2" key={item.id}>
+                <div
+                  className="flex flex-col justify-center gap-4 pt-1 sm:pt-0 text-center 
                   sm:text-left order-2 sm:order-1 relative z-10"
-            >
-              <h1 className="">{item.title}</h1>
-              <p className="">{item.description}</p>
-              <div className="">
-                <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full duration-200">
-                  Order Now
-                </button>
+                >
+                  <h1 className="">{item.title}</h1>
+                  <p className="">{item.description}</p>
+                  <div className="">
+                    <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full duration-200">
+                      Order Now
+                    </button>
+                  </div>
+                </div>
+                <div className="order-1 sm:order-2">
+                  <div className="">
+                    <img
+                      className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                      src={item.img}
+                      alt=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="order-1 sm:order-2">
-              <div className="">
-                <img
-                  className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
-                  src={item.img}
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </Slider>
       </div>
     </div>
   );
