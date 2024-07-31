@@ -27,7 +27,49 @@ const ProductsData = [
   },
 ];
 function TopProducts() {
-  return <div>TopProducts</div>;
+  return (
+    <div className="dark:bg-gray-950 dark:text-white">
+      <div className="container pt-10 pb-10 ">
+        <div className="flex flex-col pb-5">
+          <p className="text-primary">Trending Products</p>
+          <h1 className="text-3xl font-bold pb-1">
+            Top Rated Products for you
+          </h1>
+          <p className="text-sm text-gray-500">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+            asperiores modi Sit asperiores modi
+          </p>
+        </div>
+        s
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+          {ProductsData.map((item, key) => (
+            <div
+              data-aos="fade-up"
+              className="flex flex-col items-center max-w-[300px] shadow-lg p-5"
+              key={item.id}
+            >
+              <img
+                src={item.img}
+                alt="img"
+                className="h-[220px] w-[150px] rounded-md object-cover"
+              />
+              <div className="flex gap-1 items-center">
+                <FaStar className="text-yellow-500" />
+                <FaStar className="text-yellow-500" />
+                <FaStar className="text-yellow-500" />
+                <FaStar className="text-yellow-500" />
+              </div>
+              <p className="font-bold">{item.title}</p>
+              <p className="text-sm">{item.description}</p>
+              <button className="py-1 bg-primary text-white rounded-full px-4">
+                Order Now
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default TopProducts;

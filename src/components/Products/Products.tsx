@@ -63,10 +63,10 @@ function Products() {
             asperiores modi Sit asperiores modi
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 dark:text-white ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 dark:text-white">
           {ProductsData.map((item, key) => (
             <div
-              className="flex flex-col  p-2"
+              className="flex flex-col gap-2 items-center sm:items-start"
               data-aos="fade-up"
               data-aos-delay={item.aosDelay}
               key={key}
@@ -76,7 +76,7 @@ function Products() {
                 alt="img"
                 className="h-[220px] w-[150px] rounded-md object-cover"
               />
-              <p className="font-bold">{item.title}</p>
+              <p className="font-bold text-left">{item.title}</p>
               <p className="">{item.color}</p>
               <p className="flex items-center">
                 <FaStar className="text-yellow-500" />
