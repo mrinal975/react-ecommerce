@@ -52,18 +52,25 @@ function Products() {
     <div className="dark:bg-gray-950  pt-14 pb-12">
       <div className="container">
         <div className="flex flex-col items-center pb-10">
-          <p className="text-primary text-xl">Top Selling Products for you</p>
-          <p className="dark:text-white text-4xl font-bold">
-            Top Selling Products
+          <p className="text-primary text-xl" data-aos="fade-up">
+            Top Selling Products for you
           </p>
-          <p className="text-sm dark:text-white">
+          <h1 data-aos="fade-up" className="dark:text-white text-4xl font-bold">
+            Top Selling Products
+          </h1>
+          <p data-aos="fade-up" className="text-sm dark:text-white">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
             asperiores modi Sit asperiores modi
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
           {ProductsData.map((item, key) => (
-            <div className="flex flex-col" key={key}>
+            <div
+              className="flex flex-col"
+              data-aos="fade-up"
+              data-aos-delay={item.aosDelay}
+              key={key}
+            >
               <img
                 src={item.img}
                 alt="img"
