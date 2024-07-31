@@ -1,6 +1,53 @@
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
+import { FaCaretDown } from "react-icons/fa";
 import DarkMode from "./DarkMode";
+
+const Menu = [
+  {
+    id: 1,
+    name: "Home",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Top Rated",
+    link: "/#services",
+  },
+  {
+    id: 3,
+    name: "Kids Wear",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Mens Wear",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Electronics",
+    link: "/#",
+  },
+];
+
+const DropdownLinks = [
+  {
+    id: 1,
+    name: "Trending Products",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Best Selling",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Top Rated",
+    link: "/#",
+  },
+];
 
 function Navbar() {
   return (
@@ -41,6 +88,27 @@ function Navbar() {
             </div>
           </div>
         </div>
+      </div>
+      {/* Lower Navbar */}
+      <div className="flex justify-center">
+        <ul className="sm:flex hidden items-center gap-4">
+          {Menu.map((menu) => (
+            <li className="inline-block px-3 hover:text-primary duration-200">
+              <a href={menu.link} className="">
+                {menu.name}
+              </a>
+            </li>
+          ))}
+          {/* Simple Dropdown and link */}
+          <li className="group inline-block px-3 hover:text-primary duration-200">
+            <a className="flex items-center gap-[2px] py-2 ">
+              Trending Items
+              <span>
+                <FaCaretDown className="transition-all group-hover:rotate-180 duration-200" />
+              </span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
