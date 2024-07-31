@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
+import Home from "../pages/home";
 function index() {
   return (
     <Routes>
-      <Route path="/" element={<h1>Welcome to home page</h1>} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
