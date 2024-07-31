@@ -1,6 +1,6 @@
 import "./App.css";
-import DefaultLayout from "./pages/layouts/Index";
-import Routes from "./Routes/Index";
+import DefaultLayout from "@/pages/layouts/DefaultLayout";
+import Routes from "@/Routes/Index";
 function App() {
   return (
     <DefaultLayout>

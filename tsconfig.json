@@ -18,8 +18,6 @@
     "jsx": "react-jsx", // Ensure this line is included
     "baseUrl": "./",
     "paths": {
-      "@components/*": ["src/components/*"],
-      "@utils/*": ["src/utils/*"],
       "@/*": ["src/*"]
       // Add other aliases as needed
     }
