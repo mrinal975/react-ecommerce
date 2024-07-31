@@ -1,5 +1,6 @@
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 function Navbar() {
   return (
@@ -36,6 +37,7 @@ function Navbar() {
                 <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
               </button>
               {/* Dark dome */}
+              <DarkMode />
             </div>
           </div>
         </div>
