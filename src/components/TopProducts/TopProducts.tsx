@@ -40,12 +40,11 @@ function TopProducts() {
             asperiores modi Sit asperiores modi
           </p>
         </div>
-        s
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           {ProductsData.map((item, key) => (
             <div
               data-aos="fade-up"
-              className="flex flex-col items-center max-w-[300px] shadow-lg p-5"
+              className="flex flex-col items-center max-w-[300px] shadow-lg p-5 hover:bg-black/80 hover:text-white dark:bg-gray-800 bg-white dark:hover:bg-primary"
               key={item.id}
             >
               <img
@@ -61,7 +60,7 @@ function TopProducts() {
               </div>
               <p className="font-bold">{item.title}</p>
               <p className="text-sm">{item.description}</p>
-              <button className="py-1 bg-primary text-white rounded-full px-4">
+              <button className="py-1 bg-primary text-white rounded-full px-4 dark:hover:bg-white dark:hover:text-black ">
                 Order Now
               </button>
             </div>
