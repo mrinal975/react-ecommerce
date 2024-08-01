@@ -11,6 +11,7 @@ function home() {
       <TopProducts />
       <Banner />
       <Subscribe />
+      <Products />
     </>
   );
 }
