@@ -83,21 +83,24 @@ function Testimonials() {
         {/* Testimonial cards */}
         <div data-aos="zoom-in" className="">
           <Slider {...settings}>
-            {TestimonialData.map((item, key) => (
+            {TestimonialData.map((data) => (
               <div className="my-6">
-                <div className="flex flex-col">
-                  <div className="">
+                <div
+                  key={data.id}
+                  className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl dark:bg-gray-800 bg-primary/10 relative"
+                >
+                  <div className="mb-4">
                     <img
-                      src={item.img}
-                      alt="img"
+                      src={data.img}
+                      alt=""
                       className="rounded-full w-20 h-20"
                     />
                   </div>
                   <div className="flex flex-col items-center gap-4">
                     <div className="space-y-3">
-                      <p className="text-xs text-gray-500">{item.text}</p>
+                      <p className="text-xs text-gray-500">{data.text}</p>
                       <h1 className="text-xl font-bold text-black/80 dark:text-light">
-                        {item.name}
+                        {data.name}
                       </h1>
                     </div>
                   </div>
