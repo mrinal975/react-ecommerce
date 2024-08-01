@@ -59,8 +59,8 @@ function TopProducts() {
                 <FaStar className="text-yellow-500" />
               </div>
               <p className="font-bold">{item.title}</p>
-              <p className="text-sm">{item.description}</p>
-              <button className="py-1 bg-primary text-white rounded-full px-4 dark:hover:bg-white dark:hover:text-black ">
+              <p className="text-sm pb-2">{item.description}</p>
+              <button className=" py-1 bg-primary text-white rounded-full px-4 dark:hover:bg-white dark:hover:text-black ">
                 Order Now
               </button>
             </div>
